@@ -316,9 +316,12 @@
             }
 
             function route(action, id) {
-                const baseUrl =
-                    action === "tickets" ? "/go/vip/" : "/go/venue/";
-                window.location.href = baseUrl + id;
+                if (action === "tickets") {
+                    window.location.href =
+                        "https://www.ticketmaster.com/2026-world-cup-tickets/artist/4067734";
+                } else {
+                    window.location.href = "/go/venue/" + id;
+                }
             }
 
             function startCountdown() {
